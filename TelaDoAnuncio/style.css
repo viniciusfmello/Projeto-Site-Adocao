@@ -1,0 +1,259 @@
+.texto1 {
+
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    font-size: medium;
+    font-size: larger;
+    font-weight: bold;
+}
+
+.nav-link {
+    font-weight: bold;
+}
+
+.custom-bg-color {
+    background-color: #fcec9c;
+}
+
+.tituloanuncio {
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 60px;
+    color: black;
+}
+
+.subanuncio {
+
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 30px;
+    color: black;
+}
+.quadrado-fundo {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #363B45;
+    z-index: -1;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  header {
+    background-color: #FFEA9E;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+  }
+
+  header .logo {
+    font-size: 2px;
+    font-weight: bold;
+    margin-right: 20px;
+  }
+
+  header .title {
+    font-size: 15px;
+    font-weight: bold;
+    margin-right: 20px;
+  }
+
+  header .search {
+    display: flex;
+    align-items: center;
+  }
+
+  header .search input[type="text"] {
+    width: 200px;
+    padding: 5px;
+    border-radius: 5px;
+  }
+  .shortcuts .shortcut {
+font-weight: bold;
+}
+  header .shortcuts {
+    float: center;
+    display: flex;
+    align-items: center;
+  }
+
+  header .shortcut {
+    float: right;
+    text-decoration: none;
+    display: block;
+    padding: 14px 14px;
+  }
+
+  .quadrado-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    flex-wrap: wrap; /* Adiciona a propriedade flex-wrap para que os quadrados sejam distribuídos em várias linhas */
+  }
+
+  .quadrado {
+    border: 2px solid black;
+    position: relative;
+    flex: 0 0 100%;
+    max-width: 550px;
+    margin-bottom: 20px;
+  }
+
+  .quadrado-esquerda {
+    flex: 0 0 auto;
+    margin-right: 30px;
+    background-color: white; /* Adicione esta linha */
+    margin: 0 auto; /* Adicione esta linha para centralizar o quadrado da esquerda */
+  }
+
+  .quadrado-esquerda .carrossel-container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .quadrado-esquerda .carrossel {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .quadrado-esquerda .carrossel-imagem {
+    flex: 0 0 90%;
+    height: 79%;
+    object-fit: cover;
+  }
+
+  .quadrado-esquerda .rodape {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 21%;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 14px;
+  }
+
+  .quadrado-direita {
+    margin-right: auto;
+    margin-left: auto;
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: white; /* Adicione esta linha */
+  }
+
+  .quadrado-direita h1,
+  .quadrado-direita p {
+    margin: 10px;
+  }
+
+  .carrossel-container {
+    position: relative;
+    width: 100%;
+    max-width: 550px;
+    height: auto;
+    max-height: 550px;
+    overflow: hidden;
+  }
+
+  .carrossel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .carrossel-imagem {
+    width: 100%;
+    height: auto;
+  }
+
+  .botoes {
+    position: absolute;
+    bottom: 120px;
+    left: 0;
+    right: 0;
+    text-align: center;
+  }
+
+  .zap {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    margin-top: 20px; /* Adiciona espaço entre o topo do quadrado e o ícone do Zap */
+  }
+
+  @media (max-width: 768px) {
+    header .search {
+      flex: 1 1 100%;
+      justify-content: center;
+      margin-top: 10px;
+    }
+
+    header .search input[type="text"] {
+      width: 100%;
+      max-width: 300px;
+    }
+
+    header .shortcuts {
+      justify-content: center;
+      margin-top: 10px;
+    }
+
+    .quadrado {
+      flex: 0 0 100%;
+    }
+
+    .quadrado-esquerda,
+    .quadrado-direita {
+      margin-right: 0;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .quadrado-esquerda .rodape {
+      height: auto;
+    }
+
+    .quadrado-direita {
+      margin-left: 0;
+    }
+
+    .quadrado-container {
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
+    .quadrado-container .quadrado {
+      max-width: 100%;
+    }
+
+    .carrossel-container {
+      max-width: 100%;
+      max-height: none;
+    }
+  }
+
+  /* Novas regras para tornar o quadrado-direita responsivo */
+  @media (max-width: 768px) {
+    .quadrado-direita {
+      order: 1; /* Altera a ordem do elemento para ser exibido abaixo do quadrado-esquerda */
+      margin-top: 20px; /* Adiciona um espaço entre o quadrado-esquerda e o quadrado-direita */
+    }
+  }
+
+  @media (max-width: 600px) {
+    .quadrado-direita {
+      margin-top: 10px; /* Reduz ainda mais o espaço entre o quadrado-esquerda e o quadrado-direita */
+    }
+  }

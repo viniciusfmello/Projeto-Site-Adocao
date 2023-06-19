@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Tela de login</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        body {
+            background-image: url("imgs/imgfundojpg.jpg");
+            background-repeat: repeat;
+            background-size: cover;
+        }
+    </style>
+    <script src="script.js"></script>
+</head>
+
+<body>
+
+
+    <div class="container">
+        <img src="imgs/Meu projeto.png" width="300" class="d-inline-block align-top" alt="Logo">
+        <h1>Login</h1>
+        <div class="form-group">
+            <label for="username">Usuário:</label>
+            <input type="text" id="username" required class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="password">Senha:</label>
+            <input type="password" id="password" required class="form-control">
+        </div>
+        <div class="button-group">
+            <button onclick="login()" class="btn btn-primary">Entrar</button>
+            <button onclick="registerRedirect()" class="btn btn-secondary">Registre-se</button>
+          </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>
