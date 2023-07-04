@@ -1,34 +1,48 @@
 .texto1 {
-
     font-family: Georgia, 'Times New Roman', Times, serif;
     text-align: center;
-    font-size: 30px;
+    font-size: 25px;
     font-weight: bold;
-}
-.form-section {
+    margin-top: 30px;
+  }
+  
+  .form-section {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: bold;
-
-}
-
-.nav-link {
+  }
+  
+  .nav-link {
     font-weight: bold;
-}
-
-.custom-bg-color {
+  }
+  
+  .custom-bg-color {
     background-color: #fcec9c;
-}
-
-.tituloanuncio {
+  }
+  
+  .tituloanuncio {
     font-weight: bold;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 60px;
     color: black;
-}
-
-.subanuncio {
-
+  }
+  
+  .subanuncio {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 30px;
     color: black;
+  }
+  
+  .container {
+    font-family: 'Amatic SC', cursive;
+    font-size: 16px;
+    color: black;
+  }
+  body {
+    background-image: url("../imagens/fundotop1.png");
+    background-repeat: repeat;
+    background-size: cover;
+}
+.sidebar {
+  background-color: rgba(255, 255, 204, 0.7);
+  padding: 20px; 
 }

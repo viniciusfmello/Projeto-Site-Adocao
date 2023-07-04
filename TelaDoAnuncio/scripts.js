@@ -1,29 +1,14 @@
-const carrossel = document.querySelector('.carrossel');
-      const carrosselImagens = document.querySelectorAll('.carrossel-imagem');
-      let indiceAtual = 0;
+const jsonData = localStorage.getItem('anuncios');
+const data = JSON.parse(jsonData);
 
-      function mudarFoto() {
-        indiceAtual++;
-        if (indiceAtual === carrosselImagens.length) {
-          indiceAtual = 0;
-        }
-        carrossel.style.transform = `translateX(${-indiceAtual * 100}%)`;
-      }
+const parametrosUrl = new URLSearchParams(window.location.search);
+const itemId = parametrosUrl.get("id");
 
-    
-    // Retrieve data from localStorage
-    var jsonData = localStorage.getItem('dadosFormulario');
-
-    if (jsonData) {
-      // Convert the JSON string back to a JavaScript object
-      var data = JSON.parse(jsonData);
-
-      // Populate the HTML elements with the data
-      
-      document.getElementById('titulo').textContent = data.tituloAnuncio;
-      document.getElementById('especie').textContent = data.especieAnimal;
-      document.getElementById('raca').textContent = data.racaAnimal;
-      document.getElementById('descricao').textContent = data.descricao;
-      document.getElementById('cep').textContent = data.cep;
-      document.getElementById('telefone').textContent = data.telefoneContato;
-    }
+document.getElementById("imagem-anuncio").src = data[itemId].imagem;
+document.getElementById("nome-animal").innerHTML = data[itemId].nome;
+document.getElementById("nome-doador").innerHTML = data[itemId].nomeDoador;
+document.getElementById("especie").innerHTML = data[itemId].especie;
+document.getElementById("raca").innerHTML = data[itemId].raca;
+document.getElementById("descricao").innerHTML = data[itemId].descricao;
+document.getElementById("cep").innerHTML = data[itemId].cep;
+document.getElementById("telefone").innerHTML = data[itemId].telefone;

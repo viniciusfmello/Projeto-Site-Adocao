@@ -28,3 +28,72 @@
     font-size: 30px;
     color: black;
 }
+  .animal-container {
+    margin-bottom: 20px;
+  }
+
+  .animal-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+
+  .animal-name {
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  
+  .animal-container.small {
+    max-width: 200px; 
+    margin: 0 auto; 
+  }
+  .animal-name {
+    margin-top: 10px; 
+    text-align: center; 
+    color: black;
+    font-size: medium;
+  }
+ 
+  footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 150px;
+    background-color: #fcec9c;
+    color: black; 
+    text-align: center; 
+  }
+  .container {
+    min-height: calc(100vh - 150px); 
+    padding-bottom: 150px; 
+  }
+  .animal-name {
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px; 
+    color: black;
+  }
+  
+  .animal-name h4 {
+    margin-right: 10px; 
+  }
+  
+  .btn-excluir {
+    border: none;
+    background-color: darkgrey;
+    color: black;
+    border-radius: 5px;
+    padding: 5px; 
+    margin-left: auto; 
+    position: relative;
+    left: 20px;
+  
+  
+  }
+  body {
+    background-image: url("../imagens/fundotop1.png");
+    background-repeat: repeat;
+    background-size: cover;
+}

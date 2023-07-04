@@ -1,0 +1,79 @@
+[
+  {
+    "imagem": "../imagens/cao.png",
+    "nome": "Bolinha",
+    "descricao": "Bolinha é um cão muito brincalhão e adora correr no parque. Infelizmente, precisamos encontrar um novo lar para ele devido a mudanças na nossa situação familiar.",
+    "cep": "31932-123",
+    "telefone": "31 98765-4321",
+    "raca": "Poodle",
+    "especie": "Cachorro",
+    "porte": "Grande",
+    "nomeDoador": "Carla Silva"
+  },
+  {
+    "imagem": "../imagens/dog.png",
+    "nome": "Tobias",
+    "descricao": "Tobias foi encontrado na Avenida principal e está em busca de uma família amorosa. Ele é um cãozinho muito dócil e adora receber carinho.",
+    "cep": "31-98765",
+    "telefone": "31 91234-5678",
+    "raca": "Vira Lata",
+    "especie": "Cachorro",
+    "porte": "Pequeno",
+    "nomeDoador": "Mariana Santos"
+  },
+  {
+    "imagem": "../imagens/gato.png",
+    "nome": "Oliver",
+    "descricao": "Oliver é um gato muito sociável e adora brincar com bolinhas de papel. Infelizmente, estamos doando-o devido a restrições de alergia na nossa família.",
+    "cep": "31-12345",
+    "telefone": "31 98765-4321",
+    "raca": "Vira Lata",
+    "especie": "Gato",
+    "porte": "Pequeno",
+    "nomeDoador": "Ricardo Oliveira"
+  },
+  {
+    "imagem": "../imagens/cat1.png",
+    "nome": "Luna",
+    "descricao": "Luna é uma gatinha cheia de energia e muito curiosa. Ela adora explorar novos lugares e está à procura de um lar carinhoso.",
+    "cep": "31-54321",
+    "telefone": "31 91234-5678",
+    "raca": "Siamese",
+    "especie": "Gato",
+    "porte": "Medio",
+    "nomeDoador": "Amanda Rodrigues"
+  },
+  {
+    "imagem": "../imagens/cat3.png",
+    "nome": "Simba",
+    "descricao": "Simba é um gato muito carinhoso e adora receber afeto. Infelizmente, estamos doando-o devido a problemas de saúde na nossa família. Nosso filho desenvolveu uma alergia",
+    "cep": "31-67890",
+    "telefone": "31 98765-4321",
+    "raca": "Vira Lata",
+    "especie": "Gato",
+    "porte": "Pequeno",
+    "nomeDoador": "Fernanda Souza"
+  },
+  {
+    "imagem": "../imagens/cao22.png",
+    "nome": "Fred",
+    "descricao": "Fred é um cão muito leal e protetor. Ele adora longas caminhadas e é perfeito para quem busca um companheiro fiel.",
+    "cep": "31-45678",
+    "telefone": "31 91234-5678",
+    "raca": "Vira Lata",
+    "especie": "Cachorro",
+    "porte": "Grande",
+    "nomeDoador": "Rafael Costa"
+  },
+  {
+    "imagem": "../imagens/dog2.png",
+    "nome": "Nina",
+    "descricao": "Nina é uma cadelinha brincalhona e adora interagir com outros animais. Ela está à procura de um lar onde possa receber muito amor e atenção.",
+    "cep": "31-76543",
+    "telefone": "31 98765-4321",
+    "raca": "Pug",
+    "especie": "Cachorro",
+    "porte": "Pequeno",
+    "nomeDoador": "Luiza Almeida"
+  }
+]

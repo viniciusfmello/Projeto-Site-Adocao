@@ -23,7 +23,7 @@
           <div class="row">
             <a href="../TelaPrincipal/index.html">
             <div class="col-lg-2">
-              <img class="img-fluid" src="imagens/logo.png" alt="" style="max-width: 130px"></a>
+              <img class="img-fluid" src="../imagens/logo.png" alt="" style="max-width: 130px"></a>
             </div>
             <div class="col-lg-5">
               <div class="row h-140">
@@ -35,7 +35,7 @@
                     <div class="input-group">
                       <input class="form-control form-control-sm" type="search" placeholder="Buscar PET">
                       <button class="btn btn-outline-dark bg-light" type="submit">
-                        <img src="imagens/lupa.png" alt="" style="height: 17px" width="18px">
+                        <img src="../imagens/lupa.png" alt="" style="height: 17px" width="18px">
                       </button>
                     </div>
                   </form>
@@ -49,7 +49,7 @@
                     <div class="container-fluid">
                       <div class="collapse navbar-collapse justify-content-end">
                         <div class="navbar-nav">
-                          <a class="nav-link" href="#" style="margin-right: 0;">| Criar Anúncio |</a>
+                          <a class="nav-link" href="../TelaCriarAnuncio/index.html" style="margin-right: 0;">| Criar Anúncio |</a><a class="nav-link" href="../TelaAnunciosPublicados/index.html" style="margin-right: 0;">| Meus Anuncios <a class="nav-link" href="../TelaLoginECadastro/login.html" style="margin-right: 0;">| Sair
                         </div>
                       </div>
                     </div>
@@ -60,41 +60,63 @@
           </div>
         </div>
       </header>
-  
-
-  <div class="quadrado-container">
-    <div class="quadrado quadrado-esquerda" style="width: 550px; height: 550px;">
-      <div class="carrossel-container">
-        <div class="carrossel">
-          <input type="file" id="image-input" accept="image/*">
-          <img class="carrossel-imagem" src="imagens/lab.jpg" alt="Imagem 1">
-          <img class="carrossel-imagem" src="imagens/labra.png" alt="Imagem 2">
-          <img class="carrossel-imagem" src="imagens/labradormarrom.png" alt="Imagem 3">
-        </div>
-          <div class="botoes">
-              <button onclick="mudarFoto()">Próxima Foto</button>
+      <div class="quadrado-container">
+        <div class="quadrado quadrado-esquerda">
+          <div class="carrossel-container">
+            <div class="carrossel">
+              <img class="carrossel-imagem" alt="Imagem Anuncio" id="imagem-anuncio">
             </div>
             <div class="rodape">
               <div>
-                <h1>Labrador Marrom</h1>
-                <p>Descrição do que está sendo apresentado na imagem</p>
+                <h1 id="nome-animal"></h1>
               </div>
             </div>
           </div>
+        </div>
+        <div class="tituloss">
+        <div class="quadrado quadrado-direita">
+          <h1 id="titulo"></h1>
+          <p class="titulo_descricao"><span id="titulo90">NOME DO DOADOR:</span> <span id="nome-doador"></span></p>
+          <p class="titulo_descricao"><span id="titulo90">ESPÉCIE: </span><span id="especie"></span></p>
+          <p class="titulo_descricao"><span id="titulo90">RAÇA:</span> <span id="raca"></span></p>
+          <p class="titulo_descricao"><span id="titulo90">DESCRIÇÃO: </span><span id="descricao"></span></p>
+          <p class="titulo_descricao"><span id="titulo90">CEP: </span></CEP:><span id="cep"></span></p>
+          <p class="titulo_descricao"><span id="titulo90">DESEJA ADOTAR? LIGUE:</span> <span id="telefone"></span></p>
+        </div>
       </div>
     </div>
-    <div class="quadrado quadrado-direita"  style="width: 550px; height: 550px; margin-left: auto; margin-right: auto;">
-      <h1 id="titulo"></h1>
-      <p>Espécie: <span id="especie"></span></p>
-      <p>Raça: <span id="raca"></span></p>
-      <p>Descrição: <span id="descricao"></span></p>
-      <p>CEP: <span id="cep"></span></p>
-      <p>Telefone: <span id="telefone"></span></p>
-    </div>
-  </div>
   <script src="scripts.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-sjUHceK/f7ZRWf8sGgHy6mXK+TjRStsiVYmGoHHav6lI6sFKj1h63dX75i5pIYrD"
     crossorigin="anonymous"></script>
 </body>
+<footer>
+  <div class="container-fluid custom-bg-color rounded sticky-top">
+    <div class="row">
+      <div class="col-md-4">
+        <h2 class="text-center">Siga-nos</h2>
+        <div class="text-center">
+          <a href="https://www.instagram.com/napucminas/"><img src="../imagens/insta.png" style="max-width: 40px" alt="Instagram"></a>
+          <a href="https://www.facebook.com/pucminasoficial"><img src="../imagens/face.png" style="max-width: 40px" alt="Instagram"></a>
+          
+        </div>
+      </div>
+      <div class="col-md-3">
+        <h2 class="text-center">Contato</h2>
+        <p class="text-center">petsfinder@gmail.com</p>
+      </div>
+      <div class="col-md-5">
+        <h2 class="text-center">Links úteis</h2>
+        <div class="text-center">
+          <a href="../TelaSobreNos/index.html">Sobre Nós</a>
+        </div>
+      </div>
+    </div>
+    <div class="row text-center">
+      <div class="col-md-12">
+        <p><br>Pets Finder 2023 - Todos Direitos Reservados</p>
+      </div>
+    </div>
+  </div>
+</footer>
 </html>

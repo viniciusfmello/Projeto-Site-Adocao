@@ -21,3 +21,8 @@
     font-size: 60px;
     color: black;
 }
+body {
+    background-image: url("../imagens/fundotop1.png");
+    background-repeat: repeat;
+    background-size: cover;
+}

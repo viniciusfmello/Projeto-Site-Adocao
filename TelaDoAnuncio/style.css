@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+
 .texto1 {
 
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -94,7 +96,7 @@ font-weight: bold;
     justify-content: center;
     margin-top: 40px;
     margin-bottom: 40px;
-    flex-wrap: wrap; /* Adiciona a propriedade flex-wrap para que os quadrados sejam distribuídos em várias linhas */
+    flex-wrap: wrap; 
   }
 
   .quadrado {
@@ -108,8 +110,8 @@ font-weight: bold;
   .quadrado-esquerda {
     flex: 0 0 auto;
     margin-right: 30px;
-    background-color: white; /* Adicione esta linha */
-    margin: 0 auto; /* Adicione esta linha para centralizar o quadrado da esquerda */
+    background-color: white; 
+    margin: 0 auto; 
   }
 
   .quadrado-esquerda .carrossel-container {
@@ -143,15 +145,17 @@ font-weight: bold;
   }
 
   .quadrado-direita {
-    margin-right: auto;
+    margin-right: 130px;
     margin-left: auto;
+    margin-top: 30px;
+    
     flex: 0 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    background-color: white; /* Adicione esta linha */
+    background-color: white; 
   }
 
   .quadrado-direita h1,
@@ -190,7 +194,7 @@ font-weight: bold;
     width: 30px;
     height: 30px;
     position: relative;
-    margin-top: 20px; /* Adiciona espaço entre o topo do quadrado e o ícone do Zap */
+    margin-top: 20px; 
   }
 
   @media (max-width: 768px) {
@@ -244,16 +248,50 @@ font-weight: bold;
     }
   }
 
-  /* Novas regras para tornar o quadrado-direita responsivo */
+ 
   @media (max-width: 768px) {
     .quadrado-direita {
-      order: 1; /* Altera a ordem do elemento para ser exibido abaixo do quadrado-esquerda */
-      margin-top: 20px; /* Adiciona um espaço entre o quadrado-esquerda e o quadrado-direita */
+      order: 1; 
+      margin-top: 20px; 
     }
   }
 
   @media (max-width: 600px) {
     .quadrado-direita {
-      margin-top: 10px; /* Reduz ainda mais o espaço entre o quadrado-esquerda e o quadrado-direita */
+      margin-top: 10px; 
     }
   }
+  .tituloss {
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: black;
+}
+body {
+  background-image: url("../imagens/fundotop1.png");
+  background-repeat: repeat;
+  background-size: cover;
+}
+h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.titulo_descricao {
+  font-size: 17px;
+  margin-bottom: 5px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.quadrado {
+  background-color: #f2f2f2;
+}
+
+.quadrado-direita {
+  text-align: right;
+}
+
+#titulo90{
+  font-size: 20px;
+  color: red;
+  font-family: 'Cookie', cursive;
+}

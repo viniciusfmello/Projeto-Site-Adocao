@@ -1,56 +1,99 @@
-
-
-anuncios = {
-    "meusAnuncios": [
-      {
-        "imagem": "imagens/dog.png",
-        "nome": "Alfredo",
-        "descricao": "Descrição do alfredo"
-      },
-      {
-        "imagem": "imagens/dog.png",
-        "nome": "Alfredo",
-        "descricao": "Descrição do alfredo"
-      }
-    ]
+function excluirItens() {
+  const secaoItens = document.getElementById('todos-anuncios');
+  while (secaoItens.firstChild) {
+    secaoItens.removeChild(secaoItens.firstChild);
   }
-  
-  
-  
+}
+
+if (!localStorage.anuncios) {
+  fetch('../json/anuncios.json')
+    .then(response => response.json())
+    .then(data => {
+      var jsonDate = JSON.stringify(data);
+      localStorage.setItem('anuncios', jsonDate);
+      criarItens(data);
+    });
+} else {
+  const jsonData = localStorage.getItem('anuncios');
+  const data = JSON.parse(jsonData);
+  criarItens(data);
+}
+
+function criarItens(data) {
   // Criação dos elementos
-  
-  for (let i = 0; i < anuncios.meusAnuncios.length; i++) {
-    const divmd6 = document.createElement('div');
-    divmd6.className = 'col-md-6';
-  
-    const divAnimal1 = document.createElement('div');
-    divAnimal1.id = 'animal1';
-    divAnimal1.className = 'text-center';
-  
-    const linkAnuncio1 = document.createElement('a');
-    linkAnuncio1.href = 'anuncio.html';
-    linkAnuncio1.innerHTML = anuncios.meusAnuncios[i].nome;
-  
+  for (let i = 0; i < data.length; i++) {
+    const colDiv = document.createElement('div');
+    colDiv.className = 'col-md-4'; // Definindo a classe para criar 3 colunas
+
+    const card = document.createElement('div');
+    card.className = 'card';
+
     const imagemAnuncio1 = document.createElement('img');
-    imagemAnuncio1.src = anuncios.meusAnuncios[i].imagem;
-    imagemAnuncio1.id = 'fotoanuncio';
-    imagemAnuncio1.alt = 'foto';
-    imagemAnuncio1.className = 'img-fluid';
-    imagemAnuncio1.style.maxWidth = '240px';
-  
-    const nomeAnuncio1 = document.createElement('p');
-    const linkNomeAnuncio1 = document.createElement('a');
-    linkNomeAnuncio1.href = 'anuncio.html';
-    linkNomeAnuncio1.id = 'nomeanuncio1';
-    nomeAnuncio1.appendChild(linkNomeAnuncio1);
-  
+    imagemAnuncio1.src = data[i].imagem;
+    imagemAnuncio1.className = 'card-img-top';
+    imagemAnuncio1.alt = 'Imagem do anúncio';
+
+    const cardBody = document.createElement('div');
+    cardBody.className = 'card-body';
+
+    const tituloAnuncio1 = document.createElement('h5');
+    const linkAnuncio1 = document.createElement('a');
+    linkAnuncio1.href = '../telaDoAnuncio/index.html?id=' + i;
+    tituloAnuncio1.className = 'card-title';
+    tituloAnuncio1.innerHTML = data[i].nome;
+
     // Anexando os elementos corretamente
-    linkAnuncio1.appendChild(imagemAnuncio1);
-    divAnimal1.appendChild(linkAnuncio1);
-    divAnimal1.appendChild(nomeAnuncio1);
-    divmd6.appendChild(divAnimal1);
-  
-    // Adicionando a divmd6 à página (assumindo que exista um elemento pai com ID 'parentId')
-    const parentElement = document.getElementById('anuncios');
-    parentElement.appendChild(divmd6);
+    linkAnuncio1.appendChild(tituloAnuncio1);
+    card.appendChild(imagemAnuncio1);
+    cardBody.appendChild(linkAnuncio1);
+    card.appendChild(cardBody);
+    colDiv.appendChild(card);
+
+    const parentElement = document.getElementById('todos-anuncios');
+    parentElement.appendChild(colDiv);
   }
+}
+
+
+function filtrar() {
+  excluirItens();
+
+  const todosCheckbox = document.getElementById('todos');
+  const gatosCheckbox = document.getElementById('gatos');
+  const cachorrosCheckbox = document.getElementById('cachorros');
+  const todosPortesCheckbox = document.getElementById('todos-portes');
+  const pequenoCheckbox = document.getElementById('pequeno');
+  const medioCheckbox = document.getElementById('medio');
+  const grandeCheckbox = document.getElementById('grande');
+
+  const todosSelecionado = todosCheckbox.checked;
+  const gatosSelecionado = gatosCheckbox.checked;
+  const cachorrosSelecionado = cachorrosCheckbox.checked;
+  const todosPortesSelecionado = todosPortesCheckbox.checked;
+  const pequenoSelecionado = pequenoCheckbox.checked;
+  const medioSelecionado = medioCheckbox.checked;
+  const grandeSelecionado = grandeCheckbox.checked;
+
+  if (todosSelecionado && todosPortesSelecionado) {
+    const jsonData = localStorage.getItem('anuncios');
+    const data = JSON.parse(jsonData);
+    criarItens(data);
+  } else {
+    const jsonData = localStorage.getItem('anuncios');
+    const data = JSON.parse(jsonData);
+    const itensFiltrados = [];
+
+    for (let i = 0; i < data.length; i++) {
+      const item = data[i];
+      const especie = item.especie.toLowerCase();
+      const porte = item.porte.toLowerCase();
+
+      if ((todosSelecionado || (gatosSelecionado && especie === 'gato') || (cachorrosSelecionado && especie === 'cachorro')) &&
+        (todosPortesSelecionado || (pequenoSelecionado && porte === 'pequeno') || (medioSelecionado && porte === 'medio') || (grandeSelecionado && porte === 'grande'))) {
+        itensFiltrados.push(item);
+      }
+    }
+
+    criarItens(itensFiltrados);
+  }
+}

@@ -23,7 +23,7 @@
     <div class="container-fluid custom-bg-color rounded sticky-top">
       <div class="row">
         <div class="col-lg-2">
-          <img class="img-fluid" src="imagens/logo.png" alt="" style="max-width: 130px">
+          <img class="img-fluid" src="../imagens/logo.png" alt="" style="max-width: 130px">
         </div>
         <div class="col-lg-5">
           <div class="row h-140">
@@ -35,7 +35,7 @@
                 <div class="input-group">
                   <input class="form-control form-control-sm" type="search" placeholder="Buscar PET">
                   <button class="btn btn-outline-dark bg-light" type="submit">
-                    <img src="imagens/lupa.png" alt="" style="height: 17px" width="18px">
+                    <img src="../imagens/lupa.png" alt="" style="height: 17px" width="18px">
                   </button>
                 </div>
               </form>
@@ -49,7 +49,7 @@
                 <div class="container-fluid">
                   <div class="collapse navbar-collapse justify-content-end">
                     <div class="navbar-nav">
-                      <a class="nav-link" href="../TelaAnunciosPublicados/index.html" style="margin-right: 0;">| Meus Anuncios <a class="nav-link" href="../TelaCriarAnuncio/index.html">|  Criar Anúncio</a>
+                      <a class="nav-link" href="../TelaAnunciosPublicados/index.html" style="margin-right: 0;">| Meus Anuncios <a class="nav-link" href="../TelaCriarAnuncio/index.html">|  Criar Anúncio </a><a class="nav-link" href="../TelaLoginECadastro/login.html">|  Sair </a>
                     </div>
                   </div>
                 </div>
@@ -61,6 +61,7 @@
     </div>
   </header>
   <br>
+  
   <div class="container-fluid">
     <section>
       <div class="row">
@@ -68,7 +69,7 @@
           <div class="card custom-bg-color mb-2">
             <div class="card-body">
                 <h5 class="card-title">Filtro Rápido</h5>
-                <form>
+
                   <div class="mb-3">
                     <label for="filtro">Filtrar por:</label>
                     <div class="form-check">
@@ -85,42 +86,8 @@
                     </div>
                   </div>
                   <div class="mb-3">
-                    <label for="idade">Idade:</label>
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" id="todas">
-                      <label class="form-check-label" for="todas">Todas</label>
-                    </div>
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" id="0-1">
-                      <label class="form-check-label" for="0-1">0-1 ano</label>
-                    </div>
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" id="1-3">
-                      <label class="form-check-label" for="1-3">1-3 anos</label>
-                    </div>
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" id="3+">
-                      <label class="form-check-label" for="3+">3+ anos</label>
-                    </div>
-                  </div>
-                  <div class="mb-3">
-                    <label for="idade">Cidade:</label>
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" id="todas-cidades">
-                      <label class="form-check-label" for="todas-cidades">Todas</label>
-                    </div>
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" id="bh">
-                      <label class="form-check-label" for="bh">Belo Horizonte</label>
-                    </div>
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" id="juiz-de-fora">
-                      <label class="form-check-label" for="juiz-de-fora">Juiz de Fora</label>
-                    </div>
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" id="santa-luzia">
-                      <label class="form-check-label" for="santa-luzia">Santa Luzia</label>
-                    </div>
+
+
                   </div>
                   <div class="mb-3">
                     <label for="idade">Porte:</label>
@@ -141,23 +108,27 @@
                       <label class="form-check-label" for="grande">Grande</label>
                     </div>
                   </div>
-                  <!-- Exibir os anúncios publiados criados. -->
-                  <button type="submit" class="btn btn-primary">Filtrar</button>
-                </form>
+                  <button  class="btn btn-primary" onclick="filtrar()">Filtrar</button>
+
               </div>
               
           </div>
+          
         </div>
-  
-        <div class="col-12 col-md-5">
+        <div class="col-12 col-md-6">
           <h1 class="tituloanuncio mt-1">Animais em Destaque</h1>
-          <div class="row" id="anuncios">
-            <!-- Conteúdo dos animais em destaque -->
+          <div class="row row-cols-1 row-cols-md-3 g-4" id="todos-anuncios">
+            <!-- Conteúdo dos animais em destaque vai ficar aqui -->
           </div>
         </div>
- 
-      </div>
+        <div class="col-md-4 order-md-5">
+          <div class="sticky-top mt-4 float-md-end" style="margin-top: 100px;">
+            <img src="../imagens/manoDOG.png" alt="" style="width: 400px;" class="imagembonita">
+          </div>
+        </div>
+
     </section>
+    
   </div>
   
 
@@ -167,9 +138,9 @@
         <div class="col-md-4">
           <h2 class="text-center">Siga-nos</h2>
           <div class="text-center">
-            <a href="https://www.instagram.com/napucminas/"><img src="imagens/insta.png" style="max-width: 40px" alt="Instagram"></a>
+            <a href="https://www.instagram.com/napucminas/"><img src="../imagens/insta.png" style="max-width: 40px" alt="Instagram"></a>
             <a href="https://www.facebook.com/pucminasoficial">
-            <img src="imagens/face.png" style="max-width: 40px" alt="Facebook"></a>
+            <img src="../imagens/face.png" style="max-width: 40px" alt="Facebook"></a>
           </div>
         </div>
         <div class="col-md-3">
@@ -191,7 +162,7 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="scripts.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-sjUHceK/f7ZRWf8sGgHy6mXK+TjRStsiVYmGoHHav6lI6sFKj1h63dX75i5pIYrD"
     crossorigin="anonymous"></script>

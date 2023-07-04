@@ -18,35 +18,43 @@
         background-repeat: repeat;
         background-size: cover;
     }
-</style>
+    
+    #message-container {
+        display: none;
+        margin-top: 20px;
+        padding: 10px;
+        background-color: #f8f9fa;
+        border-radius: 5px;
+    }
+  </style>
 </head>
 
 <body>
   <form id="registrationForm">
-  <div class="container">
-    <h1 class="mt-5">Registre-se</h1>
-    <div class="form-group">
-      <label for="regUsername">Usuário:</label>
-      <input type="text" id="regUsername" class="form-control" required>
+    <div class="container">
+      <h1 class="mt-5">Registre-se</h1>
+      <div class="form-group">
+        <label for="regUsername">Usuário:</label>
+        <input type="text" id="regUsername" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="regPassword">Senha:</label>
+        <input type="password" id="regPassword" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" class="form-control" required>
+      </div>
+    
+      <div class="button-group">
+        <button onclick="registro()" class="btn btn-primary">Registrar</button>
+        <button onclick="loginRedirect()" class="btn btn-secondary">login</button>
+      </div>
+      
+      <div id="message-container"></div>
     </div>
-    <div class="form-group">
-      <label for="regPassword">Senha:</label>
-      <input type="password" id="regPassword" class="form-control" required>
-    </div>
-    <div class="form-group">
-      <label for="email">Email:</label>
-      <input type="email" id="email" class="form-control" required>
-    </div>
-    <div class="form-group">
-      <label for="birthdate">Data de Nascimento:</label>
-      <input type="date" id="birthdate" class="form-control" required>
-    </div>
-    <div class="button-group">
-      <button onclick="registro()" class="btn btn-primary">Registrar</button>
-      <button onclick="loginRedirect()" class="btn btn-secondary">login</button>
-    </div>
-  </div>
-</form>
+  </form>
+  
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </body>
