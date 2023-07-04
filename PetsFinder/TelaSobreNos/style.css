@@ -1,0 +1,23 @@
+.nav-link {
+    font-weight: bold;
+}
+
+.custom-bg-color {
+    background-color: #fcec9c;
+}
+
+.texto1 {
+
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    font-size: medium;
+    font-size: larger;
+    font-weight: bold;
+}
+
+.titulo {
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 60px;
+    color: black;
+}
